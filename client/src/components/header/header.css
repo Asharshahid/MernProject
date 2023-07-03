@@ -1,0 +1,32 @@
+:root{
+    --black:rgb(57, 57, 57);
+}
+.header{
+    padding-top: 30px;
+}
+.headerImage> img{
+    width: 100vw;
+    height: 100vh;
+}
+.headerTextItems{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.textItemSm{
+    font-family: "lora";
+    font-weight: 500;
+    position: absolute;
+    top: 17%;
+    font-size: 1.7rem;
+    color: rgba(0, 0, 0, 0.519);
+}
+.textItemLg{
+    font-family: "lora";
+    font-weight: 500;
+    position: absolute;
+    top: 20%;
+    font-size: 9rem;
+    color: rgba(116, 114, 114, 0.332);
+}
+

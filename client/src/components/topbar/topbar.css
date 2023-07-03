@@ -1,0 +1,98 @@
+:root{
+    --navColor:rgb(46,43,43);
+    --navLightColor:rgb(0, 0, 0);
+    --lightBlue:#0077b6;
+    --darkBlue:#045f90;
+    
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color:var(--navColor);
+    font-size:30px
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 20px;
+    height:70px;
+    background-color: rgba(255, 255, 255, 0.838);
+    align-items: center;
+    position: sticky;
+    top: 0;
+    box-shadow: .2px .2px 5px rgb(225, 222, 222);
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+li a{
+    padding:6px 12px;
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--navColor);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: .2px .2px 5px rgb(225, 222, 222);
+    border-radius: 5px;
+}
+li a:hover{
+    background-color:var(--darkBlue);
+    color: white;
+    border-radius: 8px;
+    transition: all 0.7s ease;
+}
+
+.menu-btn i{
+    display: none;
+}
+input{display: none;}
+
+
+/* RESPONSIVE NAVBAR _________________________________ */
+
+@media screen and (max-width:700px) {
+    nav{
+        justify-content: space-between;
+        padding: 5px 30px;
+    }
+    ul{
+        padding: 10px 0;
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        left: -120%;
+        width: 100%;
+        height: 320px;
+        background-color: rgba(255, 255, 255, 0.839);
+        justify-content: center;
+        transition: all 0.4s ease-out;
+    }
+    li a{
+        padding:7px 14px;
+        margin: 0 5px;
+        color: var(--navColor);
+        background-color: rgba(255, 255, 255, 0.938);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        box-shadow: .2px .2px 5px rgb(225, 222, 222);
+        border-radius: 5px;
+    }
+    
+    #click:checked ~ ul{
+        left: 0%;
+    }
+    li{
+        margin: 20px 0;
+        text-align: center;
+    }
+    .menu-btn i{
+        display: block;
+        font-size: 30px;
+        color: var(--navColor);
+    }
+    label i{
+        cursor: pointer;
+    }
+}

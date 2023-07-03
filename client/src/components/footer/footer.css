@@ -1,0 +1,16 @@
+:root{
+    --navColor:rgb(46,43,43);
+    --lightBlue:#0077b6;
+    --yellow:#f4b41a;
+    --blue:#143d59;
+}
+footer{
+    margin-top: 30px;
+    padding: 30px;
+    background-color: var(--blue);
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

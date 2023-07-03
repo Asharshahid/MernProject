@@ -1,0 +1,119 @@
+:root{
+    --blackLight:rgb(194, 194, 194);
+    --black:rgb(70, 70, 70);
+    --blue:#143d59;
+}
+
+.singlePost{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    margin: 10px 6px;
+    border-radius: 10px;
+    box-shadow:1px 1px 10px rgb(175, 175, 175);
+
+}
+.singlePost .siglePostImage {
+    margin: 10px 20px;
+    width: 98%;
+}
+.siglePostImage>img{
+    width: 100%;
+    height: 350px;
+}
+.singlePostTitleArea {
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 20px;
+}
+.singlePostTitleArea>h4{
+    font-size: 2.6rem;
+}
+.singlePostTitleArea>.singlePostIcon>a{
+    color: var(--blue);
+    cursor: pointer;
+}
+.singlePostTitleArea>.singlePostIcon>a>i{
+    margin: 10px;
+}
+
+.singlePostAuthorTime {
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--blackLight);
+    margin: 0 20px;
+    font-size: 22px;
+}
+.authorNameLink{
+    text-decoration: none;
+    color: var(--blackLight);
+    margin: 0 5px;
+}
+.authorNameLink:hover{
+    color: rgb(100, 99, 99);
+}
+.singlePostDescrption{
+    width: 90%;
+    margin: 10px 20px;
+    font-size: 20px;
+}
+
+@media screen and (max-width:800px) {
+    .singlePost{
+        width: 96%;
+    }
+    .siglePostImage>img{
+        height: 300px;
+        transition: 1s;
+    }
+    .singlePostTitleArea>h4{
+        font-size: 2.3rem;
+        transition: 1s;
+    }
+    .singlePostTitleArea,
+     .singlePostAuthorTime,
+     .singlePostDescrption{
+        width: 95%;
+        transition: 1s;
+    }
+    .singlePostAuthorTime{
+        margin: 10px 15px;
+        transition: 1s;
+    }
+}
+@media screen and (max-width:550px) {
+    .siglePostImage>img{
+        height: 250px;
+        transition: 1s;
+    }   
+    .singlePostTitleArea>h4{
+        font-size: 1.8rem;
+        transition: 1s;
+    }
+    .singlePostTitleArea,
+     .singlePostAuthorTime,
+     .singlePostDescrption{
+        width: 92%;
+        transition: 1s;
+    }
+}
+@media screen and (max-width:350px) {
+    .siglePostImage>img{
+        height: 200px;
+    }
+    .singlePostTitleArea>h4{
+        font-size: 1.6rem;
+    }
+
+    .singlePost .siglePostImage, .singlePostTitleArea, .singlePostDescrption{
+        margin:10px;
+    }
+    .singlePostAuthorTime{
+        margin: 8px;
+    }
+}

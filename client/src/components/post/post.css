@@ -1,0 +1,72 @@
+:root{
+    --navColor:rgb(46,43,43);
+    --black:rgb(67, 67, 67);
+    --lightgreen:lightgreen;
+    --navColor:rgb(46,43,43);
+    --lightBlue:#0077b6;
+    --yellow:#f4b41a;
+    --blue:#143d59;
+}
+.project{
+    min-height: 500px;
+    margin: 20px 10px;
+    width: 350px;
+    border-radius: 5px;
+    box-shadow: .2px .2px 10px rgb(190, 190, 190);
+}
+.project img{
+    width: 100%;
+    min-height: 250px;
+    max-height: 300px;
+    border-top-left-radius:5px;
+    border-top-right-radius: 5px;
+}
+
+.projectInfo .projectStatusAndDate{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 25px;
+    color: var(--black);
+}
+.projectInfo .projectName{
+    margin: 8px;
+}
+.projectInfo .projectName h1{
+    text-align: center;
+    color: var(--black);
+}
+.projectInfo .twoButton{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.projectInfo .twoButton .btn{
+    color: var(--black);
+    min-width: 120px;
+    padding: 5px 10px;
+    margin: 5px;
+    background-color:white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Varela';
+    box-shadow: 2px 2px 5px rgb(138, 129, 129);
+}
+.projectInfo .twoButton .editBtn{
+    text-decoration: none;
+    text-align: center;
+    padding:5px 0px ;
+}
+.projectInfo .twoButton .btn:hover{
+    min-width: 120px;
+    background-color:var(--blue);
+    color: white;
+    border-radius: 5px;
+    transition: 1s;
+    cursor: pointer;
+}
+.projectInfo .descDiv{
+    margin: 10px;
+    color: var(--black);
+}
