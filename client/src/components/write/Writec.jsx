@@ -11,6 +11,7 @@ export default function Writec() {
 
   const [title, setTitle] = useState("")
   const [desc, setDesc] = useState("")
+  //  const [selectedImage, setSelectedImage] = useState(null);
   
   const handlePostSubmit = async(e)=>{
     e.preventDefault();

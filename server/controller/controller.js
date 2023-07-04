@@ -1,7 +1,7 @@
 import User from "../model/userModel.js";
 import Post from "../model/postModel.js";
 import jwt from "jsonwebtoken";
-import cloudinary from 'cloudinary';
+// import cloudinary from 'cloudinary';
 // import path from "path";
 // import multer from "multer"
 
@@ -62,18 +62,18 @@ export async function login(req, res){
 
 export async function createpost(req, res){
     try{
-        const {title,desc,filename} = req.body;
+        const {title,desc} = req.body;
         const token = req.header("jwt") || req.cookies.jwt;
         const verify = jwt.verify(token,'ashar123456789');
         const findUser = await User.findOne({_id:verify._id})
 
         // Upload the image to Cloudinary
-        const result = await cloudinary.v2.uploader.upload(req.file.path);
+        // const result = await cloudinary.v2.uploader.upload(req.file.path);
 
         const newPost = new Post({
             userId:findUser._id,
             username:findUser.username,
-            image: result.secure_url, // Save the image URL to the database
+            // image: result.secure_url, // Save the image URL to the database
             title,
             desc
         })
