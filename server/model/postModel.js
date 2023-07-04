@@ -9,7 +9,7 @@ export const postSchema = new mongoose.Schema({
         type:String,
         ref:"user"
     },
-    picture: {
+    image: {
         type: String,
         required:false
       },

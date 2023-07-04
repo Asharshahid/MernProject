@@ -61,7 +61,7 @@ export async function login(req, res){
 
 export async function createpost(req, res){
     try{
-        const {title,desc} = req.body;
+        const {title,desc,filename} = req.body;
         const token = req.header("jwt") || req.cookies.jwt;
         const verify = jwt.verify(token,'ashar123456789');
         const findUser = await User.findOne({_id:verify._id})
@@ -72,7 +72,8 @@ export async function createpost(req, res){
             desc
         })
         await newPost.save()
-        res.status(201).send(newPost)
+        res.status(200).send(newPost)
+        console.log(newPost);
     }
     catch(error){
         res.status(500).send("error")
